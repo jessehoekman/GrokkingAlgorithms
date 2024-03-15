@@ -5,17 +5,14 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        i = 0
-        for i in range(len(nums)):
 
-            for x in range(len(nums)):
-                if ((nums[i] + nums[x]) == target):
-                    return [i,x]
-                else:
-                    x += 1
-            else: i += 1
+        for j in range(len(nums)):
+                for i in range(len(nums)):
+                    if j != i:
+                        if (nums[i] + nums[j] == target):
+                            return [i,j]
 
-target = 9
-nums = [11,2,15,7]
+target = 10
+nums = [2,5,5,11]
 
 print(Solution().twoSum(nums,target))
