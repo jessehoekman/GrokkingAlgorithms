@@ -15,8 +15,6 @@ class Solution(object):
 
         return occurences_s == occurences_t
 
-sol = Solution()
-
 s = "anagram"
 t = "nagaram"
 
